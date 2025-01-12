@@ -1,0 +1,24 @@
+<header class="header-container">
+  <div class="header-top" [class.scrolled]="isScrolled">
+    <div class="header-logo">
+      <a [routerLink]="['/home']" routerLinkActive="router-link-active">
+        <h1 *ngIf="isScrolled">LyF</h1>
+      </a>
+    </div>
+    <nav class="header-nav">
+      <ul class="nav-links">
+        <li><a [routerLink]="['/home']" routerLinkActive="router-link-active" >Нүүр</a></li>
+        <li><a [routerLink]="['/request']" routerLinkActive="router-link-active" >Элсэх</a></li>
+        <li><a [routerLink]="['/question']" routerLinkActive="router-link-active" >Сургуулийн Талаарх Асуултууд</a></li>
+        <li><a [routerLink]="['/login']" routerLinkActive="router-link-active" >Нэвтрэх</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="header-bottom" [class.hidden]="isHeaderBottomHidden">
+    <div class="header-logo">
+      <a [routerLink]="['/home']" routerLinkActive="router-link-active">
+        <h1 *ngIf="!isScrolled">Live Your Fantasy</h1>
+      </a>
+    </div>
+  </div>
+</header>
