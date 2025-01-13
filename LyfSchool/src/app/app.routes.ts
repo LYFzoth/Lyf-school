@@ -3,6 +3,7 @@ import { HomeIntroductionComponent } from './screens/home-introduction/home-intr
 import { RequestComponent } from './screens/request/request.component';
 import { QuiestionsComponent } from './screens/quiestions/quiestions.component';
 import { LoginComponent } from './screens/login/login.component';
+import { DetailComponent } from './screens/detail/detail.component';
 
 export const routes: Routes = [
     {
@@ -25,5 +26,9 @@ export const routes: Routes = [
     {
         path:'login',
         component:LoginComponent,
+    },
+    {
+        path:'detail',
+        component:DetailComponent,
     }
 ];

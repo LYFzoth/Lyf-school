@@ -5,7 +5,7 @@
         <h1 *ngIf="isScrolled">LyF</h1>
       </a>
     </div>
-    <nav class="header-nav">
+    <nav class="header-nav" *ngIf="isScrolled" >
       <ul class="nav-links">
         <li><a [routerLink]="['/home']" routerLinkActive="router-link-active" >Нүүр</a></li>
         <li><a [routerLink]="['/request']" routerLinkActive="router-link-active" >Элсэх</a></li>
