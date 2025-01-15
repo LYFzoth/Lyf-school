@@ -1,14 +1,10 @@
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
-    <div class="carousel-item">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">First slide</text></svg>
-    </div>
+   @for (item of carrouselData; track $index) {
     <div class="carousel-item active">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Second slide</text></svg>
+      <img src="{{item.img}}" class="d-block w-100" alt="...">
     </div>
-    <div class="carousel-item">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg>
-    </div>
+   }
   </div>
 </div>
 <div class="card-container">
@@ -43,9 +39,6 @@
   </div>
   <div class="card mb-3" style="width: 90%;">
     <div class="row g-0">
-      <div class="col-md-4">
-        <svg class="bd-placeholder-img img-fluid rounded-start" width="100%" height="450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image</text></svg>
-      </div>
       <div class="col-md-8">
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
@@ -53,6 +46,7 @@
           <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
         </div>
       </div>
+      
     </div>
   </div>
 </div>
@@ -87,7 +81,7 @@
       <i class="fas fa-chalkboard-teacher"></i> 
     </div>
     <div class="card-content">
-      <h3>Total Teachers</h3>
+      <h3>Багш нарын тоо</h3>
       <p>{{ schoolData.teachers }}</p>
     </div>
   </div>
@@ -97,7 +91,7 @@
       <i class="fas fa-user-graduate"></i> 
     </div>
     <div class="card-content">
-      <h3>Total Students</h3>
+      <h3>Сурагчдын тоо</h3>
       <p>{{ schoolData.students }}</p>
     </div>
   </div>
@@ -107,7 +101,7 @@
       <i class="fas fa-book"></i> 
     </div>
     <div class="card-content">
-      <h3>Total Courses</h3>
+      <h3>Сургалтын тоо</h3>
       <p>{{ schoolData.courses }}</p>
     </div>
   </div>
@@ -115,7 +109,7 @@
 <div class="reviews-container">
   <div class="review-card">
     <div class="review-header">
-      <h2>Location</h2>
+      <h2>Байршил</h2>
       <div class="rating">
         <span class="star">★</span>
         <span class="star">★</span>
@@ -125,22 +119,17 @@
       </div>
     </div>
     <p class="review-description">
-      The location is very convenient, easily accessible, and surrounded by various amenities such as restaurants, parks, and public transport options. It creates a perfect environment for learning.
+      Its a beatiful
     </p>
   </div>
   <div class="review-card">
     <div class="review-header">
-      <h2>Study Quality</h2>
+      <h2>Сургалтын чанар</h2>
       <div class="rating">
-        <span class="star">★</span>
-        <span class="star">★</span>
-        <span class="star">★</span>
-        <span class="star">★</span>
-        <span class="star">★</span> 
       </div>
     </div>
     <p class="review-description">
-      The study quality is top-notch, with highly skilled instructors who are experts in their fields. The curriculum is engaging, and the facilities are equipped with modern technologies to enhance learning.
+      Үнхээр новшын шалгалт авдаг газар
     </p>
   </div>
 </div>
@@ -148,26 +137,26 @@
 
   <div class="story-card">
     <div class="story-header">
-      <h2>Student Story</h2>
+      <h2>Сурагчын түүхээс</h2>
       <div class="icon">
         <i class="fas fa-user-graduate"></i> 
       </div>
     </div>
     <p class="story-content">
-      "I was initially nervous about my studies, but the supportive faculty and the collaborative environment made me feel confident. The campus has amazing facilities, and I have made lifelong friends here. I'm proud of my journey so far!"
+      Би 12той байхдаа энэ сургууль-д зарагдсан
     </p>
-    <p class="student-name">- Sarah Johnson, Computer Science Major</p>
+    <p class="student-name">- Gerald of rivia</p>
   </div>
   <div class="story-card">
     <div class="story-header">
-      <h2>Teacher Story</h2>
+      <h2>Багшийн түүх</h2>
       <div class="icon">
         <i class="fas fa-chalkboard-teacher"></i> 
       </div>
     </div>
     <p class="story-content">
-      "Teaching here has been an incredibly rewarding experience. Watching my students grow and succeed in their careers gives me immense joy. The culture of innovation and learning is truly inspiring."
+      Би энд цусан биш ч өөрийгөө золиослох охинтой болсон
     </p>
-    <p class="teacher-name">- Dr. John Doe, Professor of Mathematics</p>
+    <p class="teacher-name">- Gerald of rivia</p>
   </div>
 </div>

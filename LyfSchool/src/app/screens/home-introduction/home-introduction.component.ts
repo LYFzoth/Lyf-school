@@ -14,4 +14,19 @@ export class HomeIntroductionComponent  {
     students: 120, 
     courses: 10 
   };
+  carrouselData = [
+    
+    {
+      img: 'assets/witcher.jpg',
+      id: 1
+    },
+    {
+      img:'assets/witcher2.jpg',
+      id:2
+    },
+    {
+      img:'assets/witcher3.jpg',
+      id:3
+    }
+  ];
 }

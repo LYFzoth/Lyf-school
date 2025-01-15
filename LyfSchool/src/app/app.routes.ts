@@ -4,6 +4,7 @@ import { RequestComponent } from './screens/request/request.component';
 import { QuiestionsComponent } from './screens/quiestions/quiestions.component';
 import { LoginComponent } from './screens/login/login.component';
 import { DetailComponent } from './screens/detail/detail.component';
+import { StudentScreenComponent } from './screens/student-screen/student-screen.component';
 
 export const routes: Routes = [
     {
@@ -30,5 +31,9 @@ export const routes: Routes = [
     {
         path:'detail',
         component:DetailComponent,
+    },
+    {
+        path:'student',
+        component:StudentScreenComponent,
     }
 ];
