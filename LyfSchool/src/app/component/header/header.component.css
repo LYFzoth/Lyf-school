@@ -16,9 +16,9 @@
   text-decoration: none;
  }
 .header-top.scrolled {
-  background-color: plum;
+  background-color:#1e1e2f;
   height:300px;
-  color: #667EEA;
+  color: plum;
 }
 
 .header-top {
@@ -33,7 +33,7 @@
   font-family: 'Georgia', serif;
   font-weight: bold;
   margin: 0;
-  color: #667EEA;
+  color: plum;
   transition: font-size 0.3s ease, opacity 0.3s ease;
 }
 
@@ -53,11 +53,11 @@
   padding: 0;
 }
 .nav-links a.scrolled{
-  color: white;
+  color: plum;
 }
 .nav-links a {
   text-decoration: none;
-  color: #667EEA;
+  color: plum;
   font-size: 16px;
   transition: color 0.3s ease;
 }

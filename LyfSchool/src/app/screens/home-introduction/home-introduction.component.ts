@@ -1,32 +1,24 @@
 import { Component, } from '@angular/core';
 
-
+import {carouselData} from '../../dummyData/carrousel.dummy'
+import {newsData} from '../../dummyData/newData.dummy'
+import {reviews} from '../../dummyData/review.dummy'
+import {schoolStats} from '../../dummyData/school.dummy'
+import {stories} from '../../dummyData/story.dummy'
+import {timelineData} from '../../dummyData/timeline.dummy'
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-home-introduction',
   templateUrl: './home-introduction.component.html',
   styleUrls: ['./home-introduction.component.css'],
   standalone: true,
-  imports: [],  
+  imports: [CommonModule],  
 })
 export class HomeIntroductionComponent  {
-  schoolData = {
-    teachers: 5, 
-    students: 120, 
-    courses: 10 
-  };
-  carrouselData = [
-    
-    {
-      img: 'assets/witcher.jpg',
-      id: 1
-    },
-    {
-      img:'assets/witcher2.jpg',
-      id:2
-    },
-    {
-      img:'assets/witcher3.jpg',
-      id:3
-    }
-  ];
+  carouselData = carouselData;
+  newsData = newsData;
+  timelineData = timelineData;
+  schoolStats = schoolStats;
+  reviews = reviews;
+  stories = stories
 }

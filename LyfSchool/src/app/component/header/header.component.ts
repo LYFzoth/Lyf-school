@@ -11,25 +11,21 @@ import { RouterLink } from '@angular/router';
 export class HeaderComponent {
   isScrolled: boolean = false;
   isHeaderBottomHidden: boolean = false;
-  isNavVisible: boolean = false;
-
+  isLinksVisible: boolean = false;
+  
   @HostListener('window:scroll', [])
   onScroll(): void {
     const scrollPosition = window.scrollY;
     this.isScrolled = scrollPosition > 50; 
     this.isHeaderBottomHidden = scrollPosition > 100; 
   }
-
-  toggleNav(): void {
-    this.isNavVisible = !this.isNavVisible;
-    const navLinks = document.querySelector('.nav-links');
-    if (navLinks) {
-      if (this.isNavVisible) {
-        navLinks.classList.add('show');
-      } else {
-        navLinks.classList.remove('show');
-      }
+  
+  toggleLinks(): void {
+    this.isLinksVisible = !this.isLinksVisible;
+  
+    const headerLinks = document.querySelector('.header-links');
+    if (headerLinks) {
+      headerLinks.classList.toggle('show', this.isLinksVisible);
     }
   }
-
 }
