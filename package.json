@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "@ng-bootstrap/ng-bootstrap": "^18.0.0",
-    "@primeng/themes": "^19.0.5",
-    "primeng": "^19.0.5"
-  }
-}
